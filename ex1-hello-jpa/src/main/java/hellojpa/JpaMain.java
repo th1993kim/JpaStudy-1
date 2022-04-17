@@ -18,18 +18,9 @@ public class JpaMain {
 		try {
 			
 			//저장
-			Team team =new Team();
-			team.setName("TeamA");
-			em.persist(team);
-//			team.getMembers().add(member);
-			
 			Member member = new Member();
-			member.setUsername("member2");
-//			member.changeTeam(team);
+			member.setName("태현");
 			em.persist(member);
-
-			team.addMember(member);
-			
 			em.flush();
 			em.clear();
 			
