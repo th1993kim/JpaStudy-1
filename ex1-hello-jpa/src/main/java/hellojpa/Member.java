@@ -24,83 +24,50 @@ public class Member {
 	private String street;
 	private String zipcode;
 	
-	@OneToMany
-	@JoinColumn(name = "ORDER_ID")
-	private List<Order> orders = new ArrayList<Order>();
 	
-	
-	
-	
-//	@ManyToOne(fetch = FetchType.LAZY)
-//	@JoinColumn(name = "TEAM_ID")
-//	private Team team;
-	
-//	@Column(name = "TEAM_ID")
-//	private Long teamId;
-
-
 	public Long getId() {
 		return id;
 	}
-
-	public Member() {
-	super();
+	public void setId(Long id) {
+		this.id = id;
 	}
-
-
-	public Member(Long id, String name, String city, String street, String zipcode, List<Order> orders) {
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getStreet() {
+		return street;
+	}
+	public void setStreet(String street) {
+		this.street = street;
+	}
+	public String getZipcode() {
+		return zipcode;
+	}
+	public void setZipcode(String zipcode) {
+		this.zipcode = zipcode;
+	}
+	public Member(Long id, String name, String city, String street, String zipcode) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.city = city;
 		this.street = street;
 		this.zipcode = zipcode;
-		this.orders = orders;
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public String getCity() {
-		return city;
-	}
-
-	public String getStreet() {
-		return street;
-	}
-
-	public String getZipcode() {
-		return zipcode;
-	}
-
-	public List<Order> getOrders() {
-		return orders;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public void setCity(String city) {
-		this.city = city;
-	}
-
-	public void setStreet(String street) {
-		this.street = street;
-	}
-
-	public void setZipcode(String zipcode) {
-		this.zipcode = zipcode;
-	}
-
-	public void setOrders(List<Order> orders) {
-		this.orders = orders;
+	public Member() {
+		super();
 	}
 	
 	
+
+
 }
