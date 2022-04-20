@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+import jpabook.jpashop.domain.Category;
+
 @Entity
 public class Item {
 
