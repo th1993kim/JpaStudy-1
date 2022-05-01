@@ -7,6 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
+import static javax.persistence.FetchType.LAZY;
+
 @Entity
 public class OrderItem {
 	@Id @GeneratedValue
@@ -14,7 +16,7 @@ public class OrderItem {
 	private Long id;
 	
 
-	@ManyToOne
+	@ManyToOne(fetch = LAZY)
 	@JoinColumn(name ="ORDER_ID")
 	private Order order;
 	
@@ -22,7 +24,7 @@ public class OrderItem {
 //	@Column(name="ITEM_ID")
 //	private Long itemId;
 	
-	@ManyToOne
+	@ManyToOne(fetch = LAZY)
 	@JoinColumn(name ="ITEM_ID")
 	private Item item;
 	

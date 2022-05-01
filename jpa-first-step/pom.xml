@@ -4,7 +4,10 @@
   <artifactId>jpa-first-step</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>jpa-first-step</name>
-  
+	<properties>
+		<maven.compiler.source>11.0.2</maven.compiler.source>
+		<maven.compiler.target>11.0.2</maven.compiler.target>
+	</properties>
     <dependencies>
 		<!-- JPA 하이버네이트 -->
 		<dependency>
